@@ -19,8 +19,18 @@ for i in range(nr_symbols):
 for i in range(nr_numbers):
     lst.append(random.choice(numbers))
 
+#using choice()
 password = ""
 for i in range(len(lst)):
     password += random.choice(lst)
+
+print(f"Your password is {password}")
+
+#using shuffle() method
+
+random.shuffle(lst)
+password = ""
+for i in lst:
+    password+=i
 
 print(f"Your password is: {password}")
