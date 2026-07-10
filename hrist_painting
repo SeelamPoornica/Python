@@ -1,0 +1,35 @@
+import turtle as turtle_module
+import random
+
+turtle_module.colormode(255)
+color_list = [
+    (173, 165, 152), (206, 200, 192), (111, 100, 85), (54, 33, 23),
+    (199, 193, 181), (139, 131, 109), (20, 34, 49), (54, 22, 30),
+    (22, 41, 23), (75, 101, 81), (118, 69, 81), (138, 158, 146),
+    (105, 39, 51), (65, 86, 101), (43, 80, 60), (164, 148, 152),
+    (110, 44, 31), (159, 116, 108), (71, 72, 42), (145, 154, 158),
+    (204, 187, 182), (57, 57, 79), (118, 134, 122), (151, 108, 111),
+    (213, 201, 203), (43, 73, 79), (196, 203, 196), (207, 183, 186),
+    (186, 196, 186), (202, 204, 207)
+]
+
+turtle_module.colormode(255)
+tim = turtle_module.Turtle()
+tim.speed("fastest")
+tim.penup()
+tim.hideturtle()
+tim.setheading(225)
+tim.forward(300)
+tim.setheading(0)
+number_of_dots = 100
+
+for dot_count in range(1, number_of_dots + 1):
+    tim.dot(20, random.choice(color_list))
+    tim.forward(50)
+
+    if dot_count % 10 == 0:
+        tim.setheading(90)
+        tim.forward(50)
+        tim.setheading(180)
+        tim.forward(500)
+        tim.setheading(0)
